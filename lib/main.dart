@@ -2,6 +2,8 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:primeiro_app_flutter/home/presentation/page/home_page.dart';
 import 'package:primeiro_app_flutter/injection.dart';
+import 'package:primeiro_app_flutter/shared/theme/application_theme.dart';
+import 'package:primeiro_app_flutter/shared/theme/data/app_theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,27 +25,8 @@ class RickAndMortyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.amber,
-      ),
+      theme: ApplicationTheme.themes[AppTheme.dark]?.themeData,
       home: const HomePage(),
     );
   }
 }
-
-// class MyHomePage extends StatelessWidget {
-//   const MyHomePage({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Center(
-//       child: TextButton(
-//           onPressed: () async {
-//             final CharacterService service = GetIt.I.get();
-//             // ignore: unused_local_variable
-//             final response = await service.getCharacters();
-//           },
-//           child: const Text('Pressed')),
-//     );
-//   }
-// }
