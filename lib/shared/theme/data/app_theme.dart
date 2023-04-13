@@ -1,6 +1,7 @@
 enum AppTheme {
   light('Light'),
-  dark('Dark');
+  dark('Dark'),
+  halloween('Halloween');
 
   const AppTheme(this.title);
 

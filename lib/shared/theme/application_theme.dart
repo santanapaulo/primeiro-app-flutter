@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'data/app_theme.dart';
 import 'data/app_theme_model.dart';
@@ -18,6 +19,15 @@ class ApplicationTheme {
       themeData: ThemeData(
         useMaterial3: true,
         brightness: Brightness.dark,
+      ),
+    ),
+    AppTheme.halloween: AppThemeModel(
+      theme: AppTheme.halloween,
+      themeData: ThemeData(
+        useMaterial3: true,
+        scaffoldBackgroundColor: Colors.orange[100],
+        textTheme: GoogleFonts.emilysCandyTextTheme(),
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.orange),
       ),
     ),
   };
