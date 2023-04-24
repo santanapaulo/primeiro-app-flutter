@@ -2,6 +2,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
+import 'package:primeiro_app_flutter/details/presentation/page/details_page.dart';
 import 'package:primeiro_app_flutter/home/presentation/page/home_page.dart';
 import 'package:primeiro_app_flutter/injection.dart';
 import 'package:primeiro_app_flutter/shared/theme/application_theme.dart';
@@ -41,6 +42,10 @@ class _App extends StatelessWidget {
         title: 'Flutter Demo',
         theme: ApplicationTheme.byName(state)?.themeData,
         home: const HomePage(),
+        initialRoute: '/',
+        routes: {
+          '/details': (context) => const DetailsPage(),
+        },
       ),
     );
   }
