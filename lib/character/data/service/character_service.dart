@@ -16,8 +16,10 @@ class CharacterServiceImpl implements CharacterService {
 
   @override
   Future<CharacterApiResponse> getCharacters([int page = 1]) async {
-    final response =
-        await _client.get('/character', queryParameters: {'page': '$page'});
+    final response = await _client.get(
+      'character',
+      queryParameters: {'page': '$page'},
+    );
 
     if (response.statusCode == 200) {
       return CharacterApiResponse.fromJson(response.data);
